@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-app.use(cors({credentials: true, origin: 'http://localhost:8080'}));
+app.use(cors({credentials: true, origin: 'http://18.216.160.160/'}));
 
 console.log('Server Started');
 
