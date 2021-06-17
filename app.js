@@ -5,17 +5,11 @@ const cors = require('cors');
 const knex = require('./db.js');
 const db = require('./database')(knex);
 const port = 3000;
-const body_parser = require('body-parser');
+const body_parser = require('body-parser'); 
 app.use(body_parser.urlencoded({ extended: false }));
 app.use(body_parser.json());
 
-let test = false;
-
-
-app.use(cors({
-    credentials: true,
-    origin: test ? process.env.HOST_API_URL : process.env.SERV_API_URL
-}));
+app.use(cors());
 
 
 app.get('/', (req, res) => {
